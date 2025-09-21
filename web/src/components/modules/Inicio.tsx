@@ -4,26 +4,48 @@
 // Inspirada en la calidez familiar, con gradientes suaves y transparencias etéreas
 export default function Inicio() {
   return (
-    <div className="h-full relative overflow-hidden">
-      {/* CAPA BASE: Fondo Arquitectónico con Gradiente Familiar */}
+    <div className="h-full relative overflow-hidden bg-black pt-28 pb-20">
+      {/* --- INICIO DE LA MODIFICACIÓN --- */}
+
+      {/* CAPA 1: La Fotografía 'vetelocal4.png' a la izquierda */}
+      {/*
+        AJUSTE: Hacemos la transición del gradiente más suave.
+        Cambiamos de 'black 40%, transparent 60%' a 'black 30%, transparent 70%'.
+        Esto crea una zona de "desvanecimiento" mucho más amplia.
+      */}
       <div
         className="absolute inset-0"
-        style={{ backgroundImage: "url('/images/vetelocal7.png')", backgroundSize: '50% auto', backgroundPosition: 'left', backgroundRepeat: 'no-repeat' }}
+        style={{ 
+          backgroundImage: "url('/images/vetelocalR.png')",
+          backgroundSize: '50% auto',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+      
+        }}
       />
 
-      {/* CAPA DE PROFUNDIDAD: Overlay con Transparencia y Blur Suave */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-civet-rich/30 to-civet-green/40 backdrop-blur-[1px]">
-        <img
-          src="/images/fondoinclinado2.png"
-          alt="Susurro de Fusión"
-          className="w-full h-full object-cover opacity-60 mix-blend-multiply"
-        />
-      </div>
+      {/* CAPA 2: El Overlay 'fondoinclinado2.png' con Fusión Inversa y Blur */}
+      {/*
+        AJUSTE: Aplicamos el mismo cambio aquí para que las máscaras sigan siendo
+        el complemento perfecto una de la otra.
+      */}
 
-      {/* CAPA DE LUZ: Efecto de Brillo Suave */}
+      <div
+        className="absolute inset-0 blur-lg"
+        style={{
+          backgroundImage: `url('/images/fondoinclinado5.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      
+      {/* --- FIN DE LA MODIFICACIÓN --- */}
+
+
+      {/* CAPA DE LUZ: Efecto de Brillo Suave (Sin cambios) */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10 pointer-events-none" />
 
-      {/* CONTENIDO PRINCIPAL: Centro de Atención con Sombras Poéticas */}
+      {/* CONTENIDO PRINCIPAL: Centro de Atención con Sombras Poéticas (Sin cambios) */}
       <div className="relative w-full h-full flex items-center justify-end">
         <div className="w-full md:w-1/2 flex justify-center p-8">
           <div className="w-full max-w-lg flex flex-col justify-center space-y-6 text-center animate-fade-in">
@@ -96,3 +118,4 @@ export default function Inicio() {
     </div>
   )
 }
+

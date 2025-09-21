@@ -3,7 +3,7 @@
 // Obra de Arte: "Eco Terminal" - Un susurro digital para CIVET
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-black-terminal via-black-terminal/95 to-civet-dark/20 border-t-2 border-gradient-to-r from-black to-lime-acid/30 p-3 relative z-[60] flex-shrink-0 shadow-inner">
+    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-t border-white/10 p-3">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between text-xs">
           {/* Marca y copyright con aura */}

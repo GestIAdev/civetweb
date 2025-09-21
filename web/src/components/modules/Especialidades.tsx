@@ -11,7 +11,7 @@ export default function Especialidades() {
   ]
 
   return (
-    <div className="h-full overflow-y-auto p-4">
+    <div className="h-full overflow-y-auto p-4 pt-28 pb-20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold glow-lime mb-4">./especialidades</h2>

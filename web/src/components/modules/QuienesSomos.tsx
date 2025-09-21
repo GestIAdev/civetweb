@@ -1,120 +1,138 @@
 'use client'
 
+import ModuloLayout from '@/components/ModuloLayout'
+
 export default function QuienesSomos() {
-  return (
-    <div className="h-full overflow-y-auto p-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Header del módulo */}
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold glow-lime mb-4">
-            ./quienes-somos
-          </h2>
-          <div className="text-lime-electric font-terminal text-sm">
-            <span className="terminal-prompt"></span>
-            <span>cat historia_civet.txt</span>
-          </div>
+  const pergaminoContent = (
+    <div className="space-y-6">
+      {/* Header del módulo */}
+      <div className="text-center mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-lime-electric mb-2">
+          ./quienes-somos
+        </h2>
+        <div className="text-lime-electric font-terminal text-xs">
+          <span className="terminal-prompt"></span>
+          <span>cat historia_civet.txt</span>
         </div>
+      </div>
 
-        {/* Historia principal */}
-        <div className="bg-black-soft border-2 border-lime-acid p-6 mb-8">
-          <h3 className="text-xl text-lime-acid font-terminal mb-4 flex items-center">
-            <span className="paw-print scale-75 mr-3"></span>
-            NUESTRA HISTORIA
-          </h3>
-          <div className="space-y-4 text-gray-soft text-sm leading-relaxed">
-            <p>
-              <span className="text-lime-electric">Hace más de 15 años</span>, CIVET comenzó como un sueño: 
-              crear un espacio donde la tecnología y el amor por los animales se encontraran 
-              para brindar la mejor atención veterinaria.
-            </p>
-            <p>
-              Nuestro nombre, <span className="text-lime-acid font-semibold">CIVET</span>, 
-              representa nuestra dedicación a la <span className="text-lime-electric">
-              Ciencia, Innovación, Veterinaria y Tecnología</span>.
-            </p>
-            <p>
-              Cada día trabajamos para que tu mascota reciba no solo tratamiento médico, 
-              sino el cariño y respeto que merece como miembro de tu familia.
-            </p>
-          </div>
+      {/* Historia principal */}
+      <div className="bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg">
+        <h3 className="text-lime-electric font-terminal text-lg mb-3 flex items-center">
+          <span className="paw-print scale-75 mr-2"></span>
+          NUESTRA HISTORIA
+        </h3>
+        <div className="space-y-3 text-sm text-corpo-gray leading-relaxed">
+          <p>
+            <span className="text-lime-electric">Hace más de 15 años</span>, CIVET comenzó como un sueño: 
+            crear un espacio donde la tecnología y el amor por los animales se encontraran 
+            para brindar la mejor atención veterinaria.
+          </p>
+          <p>
+            Nuestro nombre, <span className="text-lime-electric font-semibold">CIVET</span>, 
+            representa nuestra dedicación a la <span className="text-lime-electric">
+            Ciencia, Innovación, Veterinaria y Tecnología</span>.
+          </p>
+          <p>
+            Cada día trabajamos para que tu mascota reciba no solo tratamiento médico, 
+            sino el cariño y respeto que merece como miembro de tu familia.
+          </p>
         </div>
+      </div>
 
-        {/* Equipo */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-black-terminal border-2 border-gray-terminal p-6 hover:border-lime-acid transition-colors">
-            <h4 className="text-lime-acid font-terminal text-lg mb-3">DR. MARTINEZ</h4>
-            <p className="text-xs text-lime-electric mb-2">VETERINARIO PRINCIPAL</p>
-            <p className="text-sm text-gray-soft">
-              Especialista en medicina interna y cirugía. 15+ años de experiencia 
-              salvando vidas peludas con tecnología de vanguardia.
-            </p>
-            <div className="mt-3 text-xs text-gray-terminal">
-              <span>📚 Especialización: Cardiología Veterinaria</span><br/>
-              <span>🎓 Universidad Nacional de Córdoba</span>
-            </div>
+      {/* Valores */}
+      <div className="bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg">
+        <h4 className="text-lime-electric font-terminal text-lg mb-3 text-center">NUESTROS VALORES</h4>
+        <div className="grid grid-cols-1 gap-3">
+          <div className="text-center p-2 rounded bg-lime-electric/10">
+            <div className="text-xl mb-1">❤️</div>
+            <h5 className="text-lime-electric font-terminal text-sm mb-1">COMPASIÓN</h5>
+            <p className="text-xs text-corpo-gray">Tratamos cada mascota como si fuera nuestra</p>
           </div>
-
-          <div className="bg-black-terminal border-2 border-gray-terminal p-6 hover:border-lime-acid transition-colors">
-            <h4 className="text-lime-acid font-terminal text-lg mb-3">DRA. GONZALEZ</h4>
-            <p className="text-xs text-lime-electric mb-2">ESPECIALISTA EN NUTRICIÓN</p>
-            <p className="text-sm text-gray-soft">
-              Experta en planes nutricionales personalizados y suplementación. 
-              Cada mascota tiene necesidades únicas.
-            </p>
-            <div className="mt-3 text-xs text-gray-terminal">
-              <span>📚 Especialización: Nutrición Clínica</span><br/>
-              <span>🎓 Universidad de Buenos Aires</span>
-            </div>
+          <div className="text-center p-2 rounded bg-lime-electric/10">
+            <div className="text-xl mb-1">🔬</div>
+            <h5 className="text-lime-electric font-terminal text-sm mb-1">INNOVACIÓN</h5>
+            <p className="text-xs text-corpo-gray">Tecnología de vanguardia al servicio de la vida</p>
           </div>
-        </div>
-
-        {/* Misión y Visión */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="text-center">
-            <h4 className="text-lime-electric font-terminal text-lg mb-4">MISIÓN</h4>
-            <div className="bg-black-soft border border-gray-terminal p-4">
-              <p className="text-sm text-gray-soft">
-                Proporcionar atención veterinaria integral de excelencia, 
-                combinando tecnología avanzada con el cuidado humano que 
-                cada mascota merece.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <h4 className="text-lime-electric font-terminal text-lg mb-4">VISIÓN</h4>
-            <div className="bg-black-soft border border-gray-terminal p-4">
-              <p className="text-sm text-gray-soft">
-                Ser la clínica veterinaria de referencia en Mendoza, 
-                reconocida por la innovación, calidad y el compromiso 
-                con la salud animal.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Valores */}
-        <div className="bg-black-terminal border-2 border-lime-acid p-6">
-          <h4 className="text-lime-acid font-terminal text-xl mb-4 text-center">NUESTROS VALORES</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center">
-              <div className="text-2xl mb-2">❤️</div>
-              <h5 className="text-lime-electric font-terminal text-sm mb-2">COMPASIÓN</h5>
-              <p className="text-xs text-gray-soft">Tratamos cada mascota como si fuera nuestra</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2">🔬</div>
-              <h5 className="text-lime-electric font-terminal text-sm mb-2">INNOVACIÓN</h5>
-              <p className="text-xs text-gray-soft">Tecnología de vanguardia al servicio de la vida</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2">🤝</div>
-              <h5 className="text-lime-electric font-terminal text-sm mb-2">COMPROMISO</h5>
-              <p className="text-xs text-gray-soft">Disponibles cuando más nos necesitás</p>
-            </div>
+          <div className="text-center p-2 rounded bg-lime-electric/10">
+            <div className="text-xl mb-1">🤝</div>
+            <h5 className="text-lime-electric font-terminal text-sm mb-1">COMPROMISO</h5>
+            <p className="text-xs text-corpo-gray">Disponibles cuando más nos necesitás</p>
           </div>
         </div>
       </div>
     </div>
   )
+
+  const lienzoContent = (
+    <div className="space-y-6">
+      {/* Equipo */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg hover:border-lime-electric/50 transition-colors">
+          <h4 className="text-lime-electric font-terminal text-lg mb-3">DR. MARTINEZ</h4>
+          <p className="text-xs text-lime-electric mb-2">VETERINARIO PRINCIPAL</p>
+          <p className="text-sm text-corpo-gray">
+            Especialista en medicina interna y cirugía. 15+ años de experiencia 
+            salvando vidas peludas con tecnología avanzada.
+          </p>
+          <div className="mt-3 text-xs text-corpo-gray">
+            <span>📚 Especialización: Cardiología Veterinaria</span><br/>
+            <span>🎓 Universidad Nacional de Córdoba</span>
+          </div>
+        </div>
+
+        <div className="bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg hover:border-lime-electric/50 transition-colors">
+          <h4 className="text-lime-electric font-terminal text-lg mb-3">DRA. GONZALEZ</h4>
+          <p className="text-xs text-lime-electric mb-2">ESPECIALISTA EN NUTRICIÓN</p>
+          <p className="text-sm text-corpo-gray">
+            Experta en planes nutricionales personalizados y suplementación. 
+            Cada mascota tiene necesidades únicas.
+          </p>
+          <div className="mt-3 text-xs text-corpo-gray">
+            <span>📚 Especialización: Nutrición Clínica</span><br/>
+            <span>🎓 Universidad de Buenos Aires</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Misión y Visión */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="text-center bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg">
+          <h4 className="text-lime-electric font-terminal text-lg mb-3">MISIÓN</h4>
+          <div className="text-sm text-corpo-gray">
+            Proporcionar atención veterinaria integral de excelencia, 
+            combinando tecnología avanzada con el cuidado humano que 
+            cada mascota merece.
+          </div>
+        </div>
+
+        <div className="text-center bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg">
+          <h4 className="text-lime-electric font-terminal text-lg mb-3">VISIÓN</h4>
+          <div className="text-sm text-corpo-gray">
+            Ser la clínica veterinaria de referencia en Mendoza, 
+            reconocida por la innovación, calidad y el compromiso 
+            con la salud animal.
+          </div>
+        </div>
+      </div>
+
+      {/* Tecnología */}
+      <div className="bg-minty-green/10 border border-lime-electric/30 p-4 rounded-lg text-center">
+        <h3 className="text-lime-electric font-terminal text-xl mb-3">TECNOLOGÍA AVANZADA</h3>
+        <div className="grid grid-cols-3 gap-4 text-sm text-corpo-gray">
+          <div>📡 Rayos X Digitales</div>
+          <div>🖥️ Ecografía HD</div>
+          <div>🔬 Microscopía Avanzada</div>
+        </div>
+      </div>
+    </div>
+  )
+
+  return (
+    <ModuloLayout
+      pergamino={pergaminoContent}
+      lienzo={lienzoContent}
+    />
+  )
 }
+

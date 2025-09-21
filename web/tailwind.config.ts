@@ -9,25 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // CORTE DIAGONAL - Paleta optimizada para Split asimétrico
-        'civet-green': '#32CD32',        // Verde principal - Lado B
-        'civet-rich': '#2FBF2F',         // Verde más intenso para fondos
-        'civet-dark': '#1F7A1F',         // Verde muy oscuro - mejor contraste
-        'civet-lime': '#39FF14',         // Verde lima brillante - acentos
+        // Paleta CIVET - ADN del proyecto
+        'civet-dark': '#0a0a0a',         // Negro profundo - fondo principal
+        'lime-electric': '#a3ff00',      // Verde lima eléctrico - acentos principales
+        'minty-green': '#98fb98',        // Verde menta suave - fondos secundarios
+        'corpo-gray': '#cccccc',         // Gris corpo - texto secundario
         
-        // Sistema de negros y grises optimizado
-        'corpo-black': '#000000',        // Negro puro - máximo contraste
-        'corpo-dark': '#1A1A1A',         // Negro suave para elementos
-        'corpo-gray': '#2F2F2F',         // Gris oscuro para texto secundario
-        'corpo-medium': '#666666',       // Gris medio para elementos sutiles
-        'corpo-light': '#F8F8F8',        // Gris muy claro
-        'corpo-border': '#E0E0E0',       // Bordes claros
-        
-        // Colores de transición para Split
-        'split-overlay': 'rgba(50, 205, 50, 0.15)',   // Overlay verde suave
-        'split-blur': 'rgba(50, 205, 50, 0.3)',       // Efecto blur
-        'split-gradient': 'rgba(0, 0, 0, 0.4)',       // Gradiente de foto
-        
+        // Colores heredados para compatibilidad
+        'civet-green': '#32CD32',        // Verde principal
+        'civet-rich': '#2FBF2F',         // Verde intenso
+        'civet-lime': '#39FF14',         // Verde lima brillante
+        'corpo-black': '#000000',        // Negro puro
+        'corpo-medium': '#666666',       // Gris medio
+        'corpo-light': '#F8F8F8',        // Gris claro
+        'corpo-border': '#E0E0E0',       // Bordes
         'white-clean': '#FFFFFF',        // Blanco puro
       },
       fontFamily: {
